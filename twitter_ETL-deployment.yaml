@@ -1,0 +1,37 @@
+###
+### A complete description of a Prefect Deployment for flow 'twitter-ETL'
+###
+name: elon-tweets
+description: null
+version: 26070839cfbc979c304842c19a5d648c
+tags: []
+parameters: {'user':'elonmusk'}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command:
+  - python
+  - -m
+  - prefect.engine
+  stream_output: true
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: twitter-ETL
+manifest_path: null
+storage: null
+path: /home/riellygriff21/Projects/Twitter
+entrypoint: Prefect.py:twitter_ETL
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    user:
+      title: user
+  required:
+  - user
+  definitions: null
