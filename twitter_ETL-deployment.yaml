@@ -1,11 +1,11 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'twitter-ETL'
 ###
-name: elon-tweets
+name: Elon Tweets
 description: null
-version: 26070839cfbc979c304842c19a5d648c
+version: 77be8a57cd7bdf5ac31b79745e15912c
 tags: []
-parameters: {'user':'elonmusk'}
+parameters: {"user":"elonmusk"}
 schedule: null
 infra_overrides: {}
 infrastructure:
@@ -23,8 +23,15 @@ infrastructure:
 ###
 flow_name: twitter-ETL
 manifest_path: null
-storage: null
-path: /home/riellygriff21/Projects/Twitter
+storage:
+  bucket_path: gs://prefect-blocks-rg
+  service_account_info: '**********'
+  project: null
+  _is_anonymous: true
+  _block_document_name: anonymous-3229d88a-c0e7-4728-b11d-f502bbb245ef
+  _block_document_id: 3986b87f-b92a-4073-9cce-5469e03ba7fb
+  _block_type_slug: gcs
+path: null
 entrypoint: Prefect.py:twitter_ETL
 parameter_openapi_schema:
   title: Parameters
